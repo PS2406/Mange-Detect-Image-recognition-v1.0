@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Results</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+        header {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 2rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #6b6360;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #942509;
+            background-color: #e9ecef;
+        }
+        main {
+            padding: 2rem;
+        }
+        .result-container {
+            margin-top: 2rem;
+        }
+        .result-header {
+            display: flex;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+        .result-header div {
+            flex: 1;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .result-row {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .result-row:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        .result-image {
+            width: 180px;
+            height: 180px;
+	    margin-left: 80px;
+            border-radius: 10px;
+        }
+        .result-info {
+	    margin-left: 260px;
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .result-info div {
+            text-align: center; 
+            flex: 1; 
+        }
+        .result {
+            padding: 8px 12px;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: inline-block;
+            width: 100px; 
+            text-align: center; 
+        }
+        .infected {
+            background-color: red;
+        }
+        .not-infected {
+            background-color: green;
+        }
+        .recents-link{
+            color:#942509 ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo" height="40">
+        </div>
+        <nav>
+            <ul>
+                <li><b><a href="home.html">Home</a></b></li>
+                <li><b><a href="upload.html">Upload File</a></b></li>
+                <li><b><a href="recents.html" class="recents-link">Recents</a></b></li>
+                <li><b><u><a href="index.html">Logout</a></u></b></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="result-container">
+            <div class="result-header">
+                <div>Image</div>
+                <div>Date</div>
+                <div>User</div>
+                <div>Result</div>
+            </div>
+            <div class="result-row">
+                <img src="infected1.jpg" alt="Image 1" class="result-image">
+                <div class="result-info">
+                    <div>12-01-2024</div>
+                    <div>margarette@gmail.com</div>
+                    <div><span class="result infected">Infected</span></div>
+                </div>
+            </div>
+            <div class="result-row">
+                <img src="infected2.jpg" alt="Image 2" class="result-image">
+                <div class="result-info">
+                    <div>20-02-2024</div>
+                    <div>margarette@gmail.com</div>
+                    <div><span class="result not-infected">Not Infected</span></div>
+                </div>
+            </div>
+            <div class="result-row">
+                <img src="infected3.jpg" alt="Image 3" class="result-image">
+                <div class="result-info">
+                    <div>25-10-2024</div>
+                    <div>margarette@gmail.com</div>
+                    <div><span class="result infected">Infected</span></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

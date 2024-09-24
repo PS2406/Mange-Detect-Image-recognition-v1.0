@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+        header {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 2rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #6b6360;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #942509;
+            background-color: #e9ecef;
+        }
+        .gallery {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+        }
+        .gallery img {
+            width: 32%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+	.gallery img, .side-image img {
+   	 box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	}
+        .content-section {
+            display: flex;
+            padding: 2rem;
+        }
+        .text-content {
+	    color: #484a4d;
+	    margin-top: 5%;
+	    margin-left: 4%;
+	    margin-right: 4%;
+            flex: 1;
+            padding-right: 2rem;
+        }
+        .side-image {
+            flex: 1;
+        }
+        .side-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+	.top-half {
+    	background-color: #571504;
+    	padding-bottom: 2rem;
+	}
+    .home-link{
+            color:#942509 ;
+        }
+    </style>
+</head>
+<body>
+<div class="top-half">
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo" height="40">
+        </div>
+        <nav>
+            <ul>
+                <b><li><a href="home.html" class="home-link">Home</a></li></b>
+                <b><li><a href="upload.html">Upload File</a></li></b>
+               <b><li><a href="recents.html">Recents</a></li></b>
+               <b><u><li><a href="index.html">Logout</a></li></u></b>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="gallery">
+        <img src="top1.jpeg" alt="Image 1">
+        <img src="top2.jpeg" alt="Image 2">
+        <img src="top3.jpeg" alt="Image 3">
+    </div>
+</div>
+
+    <div class="content-section">
+        <div class="text-content">
+            <h2 style="text-align:center;">Sarcoptic Mange</h2>
+            <p>Sarcoptic mange (animal scabies, pseudo scabies, canine scabies) is a highly contagious skin disease which can affect a variety of wild, domestic and farmed animals. The Sarcopetes scabiei mange mite gets transmitted to humans on close contact with infected domestic animals, leading to intense pruritis and irritation due to the hypersensitivity reactions for the mites and their products. The disease runs a prolonged course in humans who are known to have poor immune functions or in patients who are being treated with immuno-suppressants and in young children. The infestations, although they are typically self-limiting, can be intensely itching and bothersome. There are reported cases of Sarcoptic mange in humans that are not self-clearing and they require months of treatment to control them.</p>
+        </div>
+        <div class="side-image">
+            <img src="side.jpeg" alt="Image 4">
+        </div>
+    </div>
+</body>
+</html>

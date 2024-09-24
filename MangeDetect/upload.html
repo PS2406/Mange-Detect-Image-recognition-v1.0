@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+        header {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 2rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #6b6360;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #942509;
+            background-color: #e9ecef;
+        }
+        main {
+            display: flex;
+            height: calc(100vh - 80px); 
+        }
+        .upload-section {
+            width: 40%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .drop-zone {
+	    background-color: rgba(145, 131, 138, 0.22);
+            color: #484a4d;
+   	    border: 2px dashed #ccc;
+            border-radius: 20px;
+            width: 80%;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            text-align: center;
+	}
+	.center-image {
+   	    width: 100px; 
+    	    height: 100px; 
+   	    margin-bottom: 10px; 
+	}
+        .choose-file {
+            background-color: #942509;
+	    width: 350px;
+	    border-radius: 6px;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .status-section {
+	    margin-left: 0%;
+	    margin-right: 6%;
+	    margin-top: 50px;
+            width: 60%;
+            padding: 20px;
+            padding-top: 20rem;
+	    color: #484a4d;
+        }
+        .upload-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc; 
+            position: relative;
+           
+        }
+        .upload-item:last-child {
+            border-bottom: none; 
+        }
+        .upload-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 10px;
+            
+        }
+        .upload-info {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .file-details {
+            display: flex;
+            align-items: center; 
+            margin-bottom: 5px;
+        }
+        .file-name {
+            font-weight: bold;
+        }
+        .file-size {
+            margin-left: 10px; 
+            color: #6b6360;
+        }
+        .progress-container {
+            position: relative;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .progress {
+            width: 0;
+            height: 20px;
+            background-color: #942509;
+            transition: width 0.5s ease-in-out;
+        }
+        .progress-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+        }
+        .progress-percentage {
+            font-size: 12px;
+            color: #333;
+        }
+        .upload-speed {
+            font-size: 12px;
+            color: #333;
+        }
+        .cancel-button {
+            position: absolute;
+            top: -10px;
+            right: 0;
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            color: #484a4d;
+        }
+        .upload-link{
+            color:#942509 ;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo" height="40">
+        </div>
+        <nav>
+            <ul>
+                <li><b><a href="home.html">Home</a></b></li>
+                <li><b><a href="upload.html" class=" upload-link">Upload File</a></b></li>
+                <li><b><a href="recents.html">Recents</a></b></li>
+                <li><b><u><a href="index.html">Logout</a></u></b></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="upload-section">
+            <div class="drop-zone">
+		<img src="upload.png" alt="Upload Image" class="center-image">
+                <p><b>Drag files here to upload</b></p>
+            </div>
+            <b><button class="choose-file">Choose File</button></b>
+        </div>
+        <div class="status-section">
+            <h2><b>Uploading </b></h2>
+            <div class="upload-item">
+                <img src="infected1.jpg">
+                <div class="upload-info">
+                    <div class="file-details">
+                        <span class="file-name">Wombat.png</span>
+                        <span class="file-size">3.5 mb</span>
+                        <button class="cancel-button">X</button>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;"></div>
+                        </div>
+                        <div class="progress-footer">
+                            <span class="progress-percentage">75% done</span>
+                            <span class="upload-speed">210 KB/s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="upload-item">
+                <img src="infected2.jpg">
+                <div class="upload-info">
+                    <div class="file-details">
+                        <span class="file-name">Wombat.png</span>
+                        <span class="file-size">2.0 mb</span>
+                        <button class="cancel-button">X</button>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 45%;"></div>
+                        </div>
+                        <div class="progress-footer">
+                            <span class="progress-percentage">45% done</span>
+                            <span class="upload-speed">180 KB/s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="upload-item">
+                <img src="infected3.jpg">
+                <div class="upload-info">
+                    <div class="file-details">
+                        <span class="file-name">Wombat.png</span>
+                        <span class="file-size">5.8 mb</span>
+                        <button class="cancel-button">X</button>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 10%;"></div>
+                        </div>
+                        <div class="progress-footer">
+                            <span class="progress-percentage">10% done</span>
+                            <span class="upload-speed">150 KB/s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
