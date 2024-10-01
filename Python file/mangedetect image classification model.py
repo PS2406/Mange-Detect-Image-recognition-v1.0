@@ -56,7 +56,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
 
 # Training loop
-num_epochs = 10
+num_epochs = 7
 for epoch in range(num_epochs):
     for phase in ['train', 'val']:
         if phase == 'train':
